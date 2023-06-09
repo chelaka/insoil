@@ -141,6 +141,10 @@ p > strong {
 
 .problem-section {
   .challenge {
+    flex: 0 1 33%;
+    @media screen and (max-width: 768px) {
+      flex: 1 0 100%;
+    }
     img {
       max-width: 50%;
       @media screen and (max-width: 768px) {
@@ -230,6 +234,12 @@ p > strong {
       top: -18%;
       right: -21%;
       width: 108%;
+    }
+    .soil-heroes {
+      position: absolute;
+      width: 40%;
+      bottom: -5%;
+      left: 0%;
     }
   }
 }
