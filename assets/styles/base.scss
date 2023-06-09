@@ -1,0 +1,48 @@
+// Variable overrides first
+$primary: #668541;
+$secondary: #82b54e;
+$enable-shadows: true;
+$prefix: "mo-";
+
+$enable-negative-margins: true;
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// Create your own map
+$custom-spacing: (
+  6: $spacer * 6,
+  7: $spacer * 8,
+  8: $spacer * 10,
+);
+
+// Define your custom breakpoint value for small screens
+$custom-breakpoint-sm: 598px;
+
+// Define your custom padding value
+$custom-padding-sm: 20px;
+
+// Override the container padding for small screens
+@media (max-width: $custom-breakpoint-sm) {
+  .container {
+    padding-left: $custom-padding-sm !important;
+    padding-right: $custom-padding-sm !important;
+  }
+}
+
+$btn-color: #fff;
+// Merge the maps
+$spacers: map-merge($spacers, $custom-spacing);
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: "inter", system-ui, -apple-system, "Segoe UI", Roboto,
+  "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
+// stylelint-enable value-keyword-case
+$font-family-base: var(--#{$prefix}font-sans-serif);
+
+// Then import Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
