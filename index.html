@@ -867,15 +867,25 @@
       </div>
       <div class="row">
         <div class="col-lg-12 mx-auto">
-          <img
-            src="/assets/images/personalized-mix.png"
-            class="img-fluid mix-image"
-            alt="Personalized Mix"
-          />
+          <picture>
+            <source
+              media="(max-width: 598px)"
+              srcset="/assets/images/personalized-mix-mobile.png"
+            />
+            <source
+              media="(min-width: 599px)"
+              srcset="/assets/images/personalized-mix.png"
+            />
+            <img
+              src="/assets/images/personalized-mix.png"
+              class="img-fluid mix-image"
+              alt="Personalized Mix"
+            />
+          </picture>
         </div>
       </div>
     </div>
-    <div class="bg-black text-light mt-6 mt-lg-7">
+    <div class="bg-black text-light mt-5 mt-lg-7">
       <div class="container community-section position-relative">
         <div class="row text-center">
           <div class="col-lg-10 mx-auto px-4 pt-5 pb-4 px-lg-5 pt-lg-6 pb-lg-5">
