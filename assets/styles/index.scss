@@ -231,8 +231,8 @@ p > strong {
   .water-popup {
     .transparent-card {
       scale: 0.6;
-      top: -18%;
-      right: -21%;
+      top: -30%;
+      right: -23%;
       width: 108%;
     }
     .soil-heroes {
@@ -247,13 +247,15 @@ p > strong {
 .effect-section {
   .cards {
     position: absolute;
-    top: 5%;
-    left: -10%;
+    top: 0%;
+    left: -18%;
     width: 30%;
     min-width: 250px;
+    scale: 0.95;
     @media screen and (max-width: 992px) {
       position: static;
       width: 100%;
+      scale: 1;
     }
     .transparent-card,
     .floating-card {
