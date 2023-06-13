@@ -34,6 +34,21 @@ html {
   }
 }
 
+html {
+  mobile-only {
+    display: contents !important;
+    @media screen and (min-width: 599px) {
+      display: none !important;
+    }
+  }
+  mobile-up {
+    display: none !important;
+    @media screen and (min-width: 599px) {
+      display: contents !important;
+    }
+  }
+}
+
 .no-scroll {
   overflow: hidden;
 }
